@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gift World 🎁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎁 Gift World</h1>
+    <p>Perfect Gifts for Everyone</p>
+
+    <div class="cart-icon" onclick="openCart()">
+        🛒 Cart (<span id="cart-count">0</span>)
+    </div>
+</header>
+
+<nav>
+    <button onclick="filterGifts('all')">All</button>
+    <button onclick="filterGifts('men')">Men</button>
+    <button onclick="filterGifts('women')">Women</button>
+    <button onclick="filterGifts('boys')">Boys</button>
+    <button onclick="filterGifts('girls')">Girls</button>
+    <button onclick="filterGifts('children')">Children</button>
+</nav>
+
+<section class="container">
+
+    <!-- MEN -->
+    <div class="card men">
+        <img src="images/men1.jpg">
+        <h3>Men Watch</h3>
+        <p>Rs. 2999</p>
+        <button onclick="addToCart('Men Watch', 2999)">Add to Cart</button>
+    </div>
+
+    <div class="card men">
+        <img src="images/men2.jpg">
+        <h3>Men Wallet</h3>
+        <p>Rs. 1499</p>
+        <button onclick="addToCart('Men Wallet', 1499)">Add to Cart</button>
+    </div>
+
+    <!-- WOMEN -->
+    <div class="card women">
+        <img src="images/women1.jpg">
+        <h3>Women Perfume</h3>
+        <p>Rs. 2599</p>
+        <button onclick="addToCart('Women Perfume', 2599)">Add to Cart</button>
+    </div>
+
+    <div class="card women">
+        <img src="images/women2.jpg">
+        <h3>Hand Bag</h3>
+        <p>Rs. 3499</p>
+        <button onclick="addToCart('Hand Bag', 3499)">Add to Cart</button>
+    </div>
+
+    <!-- BOYS -->
+    <div class="card boys">
+        <img src="images/boy1.jpg">
+        <h3>Remote Car</h3>
+        <p>Rs. 1999</p>
+        <button onclick="addToCart('Remote Car', 1999)">Add to Cart</button>
+    </div>
+
+    <!-- GIRLS -->
+    <div class="card girls">
+        <img src="images/girl1.jpg">
+        <h3>Doll Set</h3>
+        <p>Rs. 1599</p>
+        <button onclick="addToCart('Doll Set', 1599)">Add to Cart</button>
+    </div>
+
+    <!-- CHILDREN -->
+    <div class="card children">
+        <img src="images/child1.jpg">
+        <h3>Story Books</h3>
+        <p>Rs. 999</p>
+        <button onclick="addToCart('Story Books', 999)">Add to Cart</button>
+    </div>
+
+</section>
+
+<!-- CART POPUP -->
+<div id="cart-modal" class="cart-modal">
+    <h2>Your Cart 🛒</h2>
+    <div id="cart-items"></div>
+    <button onclick="closeCart()">Close</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
